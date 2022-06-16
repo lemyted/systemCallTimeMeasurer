@@ -14,18 +14,10 @@ Journey *makeJourney() {
   Journey *journey = (Journey*) malloc(sizeof(Journey));
   journey->start = (timespec*) malloc(sizeof(timespec));
   journey->finish = (timespec*) malloc(sizeof(timespec));
-  // journey->start->timeInterval = (timeval*) malloc(sizeof(timeval));
-  // journey->start->timeZone = (timezone*) malloc(sizeof(timezone));
-  // journey->finish->timeInterval = (timeval*) malloc(sizeof(timeval));
-  // journey->finish->timeZone = (timezone*) malloc(sizeof(timezone));
   return journey;
 }
 
 void deleteJourney(Journey *journey) {
-  // free(journey->start->timeInterval);
-  // free(journey->start->timeZone);
-  // free(journey->finish->timeInterval);
-  // free(journey->finish->timeZone);
   free(journey->start);
   free(journey->finish);
   free(journey);
